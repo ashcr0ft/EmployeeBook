@@ -1,6 +1,6 @@
 public class Main {
     private static Employee[] employees = new Employee[10];
-
+    private static int percent = 5;
     public static Employee createEmployee(String name, int department, int salary) {
         Employee employee = new Employee(name, department, salary);
         return employee;
@@ -23,6 +23,9 @@ public class Main {
         System.out.println("findMaxSalary() = " + findMaxSalary());
         System.out.println("avgSalary() = " + avgSalary());
         printAllEmployees();
+        indexWages(percent);
+        System.out.println("calculateSalaryPerMonth() = " + calculateSalaryPerMonth());
+
     }
 
     public static void printEmployees() {
@@ -77,6 +80,12 @@ public class Main {
     public static void printAllEmployees() {
         for (Employee employee : employees) {
             System.out.println("employee.getName() = " + employee.getName());
+        }
+    }
+
+    public static void indexWages(int percent) {
+        for (Employee employee : employees) {
+            employee.setSalary(employee.getSalary() + (employee.getSalary() * percent / 100));
         }
     }
 
