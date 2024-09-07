@@ -1,6 +1,7 @@
 public class Main {
     private static Employee[] employees = new Employee[10];
-    private static int percent = 5;
+    private static double percent = 1.03;
+
     public static Employee createEmployee(String name, int department, int salary) {
         Employee employee = new Employee(name, department, salary);
         return employee;
@@ -83,9 +84,9 @@ public class Main {
         }
     }
 
-    public static void indexWages(int percent) {
+    public static void indexWages(double percent) {
         for (Employee employee : employees) {
-            employee.setSalary(employee.getSalary() + (employee.getSalary() * percent / 100));
+            employee.setSalary((int) (employee.getSalary() * percent));
         }
     }
 
