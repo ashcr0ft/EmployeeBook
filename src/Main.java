@@ -86,7 +86,7 @@ public class Main {
 
     public static void indexWages(double percent) {
         for (Employee employee : employees) {
-            employee.setSalary((int) (employee.getSalary() * percent));
+            employee.setSalary((int) (employee.getSalary() * (1+ percent/100)));
         }
     }
 
