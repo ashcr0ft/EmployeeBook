@@ -42,6 +42,14 @@ public class Employee {
         this.salary = salary;
     }
 
+    public String toStringNonDepartmental() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
