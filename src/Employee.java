@@ -30,6 +30,7 @@ public class Employee {
         return id;
     }
 
+
     public void setName(String name) {
         this.name = name;
     }
@@ -40,6 +41,14 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String toStringNonDepartmental() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 
     @Override
